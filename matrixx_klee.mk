@@ -8,14 +8,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Matrixx stuff.
+$(call inherit-product, vendor/matrixx/config/common_full_phone.mk)
 
 # Inherit from klee device
 $(call inherit-product, device/xiaomi/klee/device.mk)
 
+# Flags
+MATRIXX_MAINTAINER := Mrick343
+TARGET_CUSTOM_UDFPS := true
+WITH_GMS := true
+USE_REALITY_ENGINE := false
+TARGET_OPTIMIZED_DEXOPT := true
+
 PRODUCT_DEVICE := klee
-PRODUCT_NAME := lineage_klee
+PRODUCT_NAME := matrixx_klee
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 2511FPC34G
 PRODUCT_MANUFACTURER := xiaomi
